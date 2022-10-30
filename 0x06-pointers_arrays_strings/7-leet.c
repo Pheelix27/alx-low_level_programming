@@ -9,16 +9,16 @@ include "main.h"
 
 char *leet(char *s)
 {
-	int i, j;
+	int x, y;
 	char a[] = "aAeEoOtTlL";
 	char b[] = "4433007711";
 
-	for (i = 0; *(s + i); i++)
+	for (x = 0; *(s + x); x++)
 	{
-		for (j = 0; j <= 9; j++)
+		for (y = 0; y <= 9; y++)
 		{
-			if (a[j] == s[i])
-				s[i] = b[j];
+			if (a[y] == s[x])
+				s[x] = b[y];
 		}
 	}
 	return (s);
