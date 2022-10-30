@@ -2,26 +2,26 @@ include "main.h"
 
 /**
  * leet - function that encodes a string into 1337
- * @s: string to input
+ * @n: string to input
  *
- * Return: the value of s
+ * Return: the value of n
  */
 
-char *leet(char *s)
+char *leet(char *n)
 {
-	int x, y;
+	int i, j;
 	char a[] = "aAeEoOtTlL";
 	char b[] = "4433007711";
 
-	for (x = 0; s[x] != '\0'; x++)
+	for (i = 0; n[i] != '\0'; i++)
 	{
-		for (y = 0; y < 10; y++)
+		for (j = 0; j < 10; j++)
 		{
-			if (s[x] == a[y])
+			if (n[i] == a[j])
 			{
-				s[x] = b[y];
+				n[i] = b[j];
 			}
 		}
 	}
-	return (s);
+	return (n);
 }
